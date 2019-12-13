@@ -1,0 +1,42 @@
+﻿@model CourseManager.Models.Websiteinfo
+@using CourseManager.Models
+
+
+@{
+    ViewBag.Title = "主页";
+    var siteinfoFromViewBag =(CourseManager.Models.Websiteinfo) ViewBag.Siteinfo;
+    var siteinfoFromViewData = (CourseManager.Models.Websiteinfo)ViewData["Siteinfo"];
+    
+}
+@section featured {
+  
+        <div class="content-wrapper">
+            
+                <h1>@Model.SiteName</h1>
+                <h2>@ViewBag.CopyRight</h2>
+            <p>
+              @Model.CopyRight  
+            </p>
+        </div>
+    
+    
+        <div class="content-wrapper">
+            
+                <h1>@siteinfoFromViewBag.SiteName</h1>
+                <h2>@siteinfoFromViewBag.CopyRight</h2>
+           
+            <p>
+              @Model.CopyRight  
+            </p>
+        </div>
+     <div class="content-wrapper">
+            
+                <h1>@siteinfoFromViewData.SiteName</h1>
+                <h2>@siteinfoFromViewData.CopyRight</h2>
+           
+            <p>
+              @Model.CopyRight  
+            </p>
+        </div>
+   
+}

@@ -32,5 +32,19 @@ namespace CourseManager.Controllers
 
             return View();
         }
+        [ChildActionOnly]
+
+        public ActionResult Site()
+        {
+            var site = new Websiteinfo();
+            ViewBag.Site = site;
+            return PartialView("~/Views/Shared/Site.cshtml");
+        }
     }
-}
+
+    }
+
+
+    
+   
+

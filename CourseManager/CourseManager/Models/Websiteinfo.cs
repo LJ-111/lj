@@ -20,6 +20,7 @@ namespace CourseManager.Models
     {
 
         public const string SiteName = "课程管理系统";
+        public object CopyRight;
 
         public List<ActionLink>ActionLinks{get;set;}
 
